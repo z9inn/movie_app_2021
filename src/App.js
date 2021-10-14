@@ -62,10 +62,11 @@ function App() {
   );
 }
 
+//prop-types는 props를 검사하고 자료형과 그 이름의 값이 전달되었는지 검사해준다. 개발자가 실수하지 않도록 예방해주는 유용한 도구이다
 Food.propTypes = {
   name: PropTypes.string.isRequired,
   picture: PropTypes.string.isRequired, //isRequired: 필요하다
-  rating: PropTypes.string.isRequired, //string + isRequired는 문자열 자료형이 필요하다. 라는 뜻 인데 rating은 숫자로 이루어져 있는 데이터이니 string이 아닌 number 타입이어야 맞다
+  rating: PropTypes.number, //string + isRequired는 문자열 자료형이 필요하다. 라는 뜻 인데 rating은 숫자로 이루어져 있는 데이터이니 string이 아닌 number 타입이어야 맞다
 };
 
 export default App;
