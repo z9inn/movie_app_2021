@@ -25,6 +25,11 @@ class App extends React.Component{
   componentDidMount() {
     console.log('component redered'); // 3
   }
+  componentDidUpdate() {
+    console.log('I just updated'); // 이 함수는 화면이 업데이트 되면 실행된다. (F5말고 내용이 업데이트 되면 실행된다. 현재 상태에서는 Add나 Minus 버튼을 누르면 콘솔에 찍힌다)
+    // 추가 또는 제거 버튼을 누르면 setState() 함수가 실행되고, render() 함수가 다시 실행되니까(화면이 업데이트 되니까) componentDidUpdate() 함수가 실행되는 것
+    // p.133 그림 참고
+  }
 
   render() {
     console.log("i'm rendering") // 2
