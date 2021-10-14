@@ -22,8 +22,12 @@ class App extends React.Component{
     }));
   };
 
+  componentDidMount() {
+    console.log('component redered'); // 3
+  }
+
   render() {
-    console.log('render') // 2
+    console.log("i'm rendering") // 2
     return (
     <>
     <h1>This Number is: {this.state.count}</h1>
@@ -34,6 +38,6 @@ class App extends React.Component{
   }
 }
 
-// 1,2 constructor()함수가 render() 함수보다 먼저 실행된다
+// 1,2,3 순서대로 실행된다. 함수의 실행 순서가 궁금하다면 React Life Cycle을 검색해보자
 
 export default App;
