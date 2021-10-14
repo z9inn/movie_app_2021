@@ -34,6 +34,7 @@ class App extends React.Component{
     console.log('GoodBye, cruel world'); // 이 함수는 화면을 떠나게 만드는 코드를 작성하면 실행된다. 컴포넌트가 죽을때 언마운트로 분류한다
     // 이 함수는 실행되지 않는다. 컴포넌트가 죽지 않았기 때문에
   }
+  // componentWillmount() 함수는 보통 컴포넌트에 적용한 이벤트 리스너를 제거할 때 많이 사용한다
 
   render() {
     console.log("i'm rendering") // 2
