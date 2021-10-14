@@ -30,6 +30,10 @@ class App extends React.Component{
     // 추가 또는 제거 버튼을 누르면 setState() 함수가 실행되고, render() 함수가 다시 실행되니까(화면이 업데이트 되니까) componentDidUpdate() 함수가 실행되는 것
     // p.133 그림 참고
   }
+  componentWillUnmount() {
+    console.log('GoodBye, cruel world'); // 이 함수는 화면을 떠나게 만드는 코드를 작성하면 실행된다. 컴포넌트가 죽을때 언마운트로 분류한다
+    // 이 함수는 실행되지 않는다. 컴포넌트가 죽지 않았기 때문에
+  }
 
   render() {
     console.log("i'm rendering") // 2
