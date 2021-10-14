@@ -47,7 +47,7 @@ const foodLike = [
 function App() {
   return (
     <div className="App">
-      {foodLike.map(dish => (
+      {foodLike.map(dish => ( //Arrow Function은 함수명과 리턴값이 없어도 사용할 수 있다. 굳이 function 키워드가 없어도 되고 return을 사용하지 않아도 식을 계산한 값이 자동으로 변환된다
         <Food key={dish.id} name={dish.name} picture={dish.img} /> //key props는 리액트 내부에서 사용되는 특수한 props이기 때문에 내가 직접 만들 props와 다르게 Food 컴포넌트에 직접 전달되지 않는다
       )
     )
