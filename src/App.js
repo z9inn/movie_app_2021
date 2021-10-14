@@ -4,7 +4,7 @@ const Food = ({name, picture}) => {
   return (
     <div>
       <h2>I like {name}</h2>
-      <img src={picture} style={{width:'100px' , height:'100px'}} />
+      <img src={picture} style={{ width: '100px', height: '100px' }} alt={name}/>
     </div>
   );
 }
@@ -48,7 +48,7 @@ function App() {
   return (
     <div className="App">
       {foodLike.map(dish => (
-        <Food key={dish.id} name={dish.name} picture={dish.img} />
+        <Food key={dish.id} name={dish.name} picture={dish.img} /> //key props는 리액트 내부에서 사용되는 특수한 props이기 때문에 내가 직접 만들 props와 다르게 Food 컴포넌트에 직접 전달되지 않는다
       )
     )
   }
