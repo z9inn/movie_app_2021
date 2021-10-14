@@ -40,6 +40,10 @@ const foodLike = [
   },
 ];
 
+//id 추가 하는 이유
+//리액트는 Food 컴포넌트가 서로 다르다는 걸 알 방법이 없기 때문이다
+//그리고 리액트에게 컴포넌트가 서로 다르다는 걸 알려주는 방법이 컴포넌트에 key props를 추가하는 것이다
+
 function App() {
   return (
     <div className="App">
