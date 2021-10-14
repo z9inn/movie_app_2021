@@ -31,8 +31,8 @@ const foodLike = [
 function App() {
   return (
     <div className="App">
-      {foodLike.map((abc) => (
-        <Food name={abc.name} picture={abc.img} /> //props는 마지막에 작성된 것만 나오는 듯? image인 김치와 비빔밥은 안나오고 img인 삼겹살과 김밥만 나온다 순서를 달리하면 김치와 비빔밥만 나온다
+      {foodLike.map((dish) => (
+        <Food name={dish.name} picture={dish.img} /> //props는 마지막에 작성된 것만 나오는 듯? image인 김치와 비빔밥은 안나오고 img인 삼겹살과 김밥만 나온다 순서를 달리하면 김치와 비빔밥만 나온다
       ))}
     </div>
   );
