@@ -1,9 +1,16 @@
 import React from "react";
+import axios from "axios";
 
 class App extends React.Component{
 
   state = {
     isLoading: true, // this.state
+    movies: [],
+  };
+
+  componentDidMount() { // App 컴포넌트가 그려지면(render() 함수가 실행되면) 호출되는 생명주기 함수는 componentDidMount() 함수다
+    // 영화 데이터 로딩! (영화 데이터 로딩이 완료되면 이란뜻)
+    axios.get('https://yts-proxy.now.sh/list_movies.json');
   };
 
   render() {
