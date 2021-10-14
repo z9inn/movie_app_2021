@@ -1,6 +1,11 @@
 import React from "react";
 
 class App extends React.Component{
+  constructor(props) {
+    super(props);
+    console.log('hello') // 1
+  }
+
   state = { //state는 동적데이터를 저장할 수 있어야한다
     count: 2,
   };
@@ -8,14 +13,17 @@ class App extends React.Component{
   add = () => {
     this.setState(current => ({
       count: current.count + 1,
-    }))
-  }
+    }));
+  };
 
   minus = () => {
-    this.setState({count: this.state.count - 1}) // 이렇게 코드를 작성해서 state를 업데이트 하는것은 좋지않다 성능에 문제가 생길 수 있다. 그러니 위 add 함수 처럼 current 인자를 사용하도록 하자
-  }
+    this.setState(current => ({
+      count: current.count - 1,
+    }));
+  };
 
   render() {
+    console.log('render') // 2
     return (
     <>
     <h1>This Number is: {this.state.count}</h1>
@@ -25,5 +33,7 @@ class App extends React.Component{
     )
   }
 }
+
+// 1,2 constructor()함수가 render() 함수보다 먼저 실행된다
 
 export default App;
