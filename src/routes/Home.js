@@ -51,6 +51,7 @@ class Home extends React.Component {
                 genres={movie.genres}
               />
             ))}
+              <h1 style={{ color: 'red'}}>확인</h1>
           </div>
         )}
       </section>
