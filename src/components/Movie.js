@@ -26,7 +26,7 @@ function Movie({ title, year, summary, poster, genres }) {
         </Link>
       </div>
     );
-}
+}//
 
 Movie.propTypes = {
     year: PropTypes.number.isRequired,
